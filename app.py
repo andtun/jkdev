@@ -14,6 +14,10 @@ def main():
         return html('main')
     return html("index")
 
+@get("/andtun")
+def me():
+    return html("me")
+
 @get("/cleverpage")
 def clever():
     return html("clever")
