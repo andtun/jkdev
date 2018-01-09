@@ -1,7 +1,9 @@
 # This Python file uses the following encoding: utf-8
 
 import os
+import json
 from bottle import *
+from botApi import alertBot
 
 
 def html(filename):
@@ -17,6 +19,12 @@ def main():
 @get("/andtun")
 def me():
     return html("me")
+
+@post("/process")
+def process():
+    alertBot.sendMessage(json.dumps(request.forms.dict, ensure_ascii=False))
+    redirect("/sent.html")
+
 
 @get("/cleverpage")
 def clever():

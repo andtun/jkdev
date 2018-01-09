@@ -150,6 +150,7 @@ img {
 .divider {
   color: #fff;
   text-align: center;
+  cursor: default;
 }
 .divider .fa {
   border: 2px solid #fff;
@@ -166,10 +167,11 @@ img {
 .divider .divider-wrapper {
   padding: 40px 20px 40px 20px;
   bottom: 40px;
+  position: relative;
+  transition: all 0.4s ease-in;
 }
 .divider .divider-wrapper:hover {
   bottom: 60px;
-  cursor: pointer;
 }
 .divider .divider-one {
   background: #c14000;
@@ -221,8 +223,9 @@ img {
   padding-bottom: 10px;
 }
 #team .team-wrapper {
-  border: 2px solid #303030;
+  border: 2px solid #d54ab5;
   padding: 20px;
+  background: #d406ec0a;
 }
 #team h4 {
   color: #d54ab6;
